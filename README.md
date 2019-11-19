@@ -18,8 +18,12 @@ openCV with GoPro
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D INSTALL_C_EXAMPLES=OFF \
     -D OPENCV_ENABLE_NONFREE=ON \
-		-D CMAKE_CXX_COMPILER=/usr/local/gcc-9.2/bin/g++-9.2 \
 		-D ENABLE_CXX11=ON \
-    -D BUILD_EXAMPLES=ON .. 
+    -D BUILD_EXAMPLES=ON ..
 ```
 
+# issues & fix
+
+1. Use `opencv_contrib/modules` instead of `opencv_contrib` for `OPENCV_EXTRA_MODULES_PATH`
+2. Set `ENABLE_CXX11` to `ON`
+3. if you has `limits.h` not found issue, you should run `brew reinstall gcc`
